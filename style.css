@@ -82,8 +82,9 @@ h2 {
     opacity: 1;
     position: relative;
     transform: scaleX(-1);
-    top: -520px;
-    left: 250px;
+    top: -530px;
+    left: -250px;
+    z-index:5;
 }
 #button2{
     width: 100px;
@@ -93,8 +94,9 @@ h2 {
     opacity: 1;
     position: relative;
     transform: scaleX(-1);
-    top: -620px;
-    left: 100px;
+    top: -630px;
+    left: -100px;
+    z-index:5;
 }
 #button3{
     width: 100px;
@@ -104,8 +106,9 @@ h2 {
     opacity: 1;
     position: relative;
     transform: scaleX(-1);
-    top: -720px;
-    left: -100px;
+    top: -730px;
+    left: 100px;
+    z-index:5;
 }
 #button4{
     width: 100px;
@@ -115,8 +118,9 @@ h2 {
     opacity: 1;
     position: relative;
     transform: scaleX(-1);
-    top: -820px;
-    left: -250px;
+    top: -830px;
+    left: 250px;
+    z-index:5;
 }
 #restart_btn
 {
