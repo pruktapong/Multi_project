@@ -1,4 +1,4 @@
-var object1 = document.getElementById("object1");
+var object1 = document.getElementById("object1"); //กำหนดตัวแปร
 var object2 = document.getElementById("object2");
 var object3 = document.getElementById("object3");
 var object4 = document.getElementById("object4");
@@ -10,16 +10,16 @@ var count = 0;
 var check = 0;
 var topscore = 0;
 
-document.getElementById("restart_btn").style.display = "none";
-document.getElementById("stop_btn").style.display = "none";
+document.getElementById("restart_btn").style.display = "none"; //กำหนดให้ปุ่ม Rstart หาย
+document.getElementById("stop_btn").style.display = "none"; //กำหนดให้ปุ่ม Stop หาย
 
 function gameplay(x) {
-  document.getElementById("type").innerHTML = "Press any Key to play";
-  document.addEventListener("keyup", function correct(event) {
-    console.log(event.key);
-    x = event.key;
+  document.getElementById("type").innerHTML = "Press any Key to play"; //เปลี่ยน Type เป็น Press any Key to play
+  document.addEventListener("keyup", function correct(event) { // Add Keyboard เข้ามาใน Web
+    console.log(event.key); // Show Keyboard ใน Log
+    x = event.key; //แทนค่า
 
-    var check1 = parseInt(
+    var check1 = parseInt( //ดึงค่า Top จาก  Object ใน CSS
       window.getComputedStyle(object1).getPropertyValue("top")
     );
     var check2 = parseInt(
@@ -31,28 +31,29 @@ function gameplay(x) {
     var check4 = parseInt(
       window.getComputedStyle(object4).getPropertyValue("top")
     );
-    if (count > topscore) {
+    if (count > topscore) { // Keep Top scores
       topscore = count;
     }
-    if (count >= -1) {
+    if (count >= -1) { // Leval 1
       level1();
     }
-    if (count == 20 && check == 0) {
+    if (count == 20 && check == 0) { // Leval 2
       check++;
-      swap();
+      
       alert("Level 2!!!");
       level2();
     }
-    if (count == 50 && check == 1) {
+    if (count == 50 && check == 1) { // Leval 3
       check++;
       swap();
       alert("Level 3!!!");
       level3();
     }
-    if (count <= -6 || count >= 70) {
+    if (count <= -5 || count >= 70) {  // End
+      document.getElementById("txt").innerHTML = "คะแนนสูงสุดของคุณ!!!";
       end();
     }
-    if (x == "a" && check1 > -130 && check1 < -30) {
+    if (x == "a" && check1 > -130 && check1 < -30) { // Check Button when Input Keyboard => Correct
       console.log("Hit1");
       document.getElementById("txt").innerHTML = "Hit";
       count++;
@@ -76,7 +77,7 @@ function gameplay(x) {
       count++;
       document.getElementById("score").innerHTML = count;
       document.getElementById("type").innerHTML = "ชนิด 4";
-    } else if (
+    } else if ( // Bug!!!!! (i can't edit it by oat)
       check1 > -30 ||
       check2 > -130 ||
       check3 > -230 ||
@@ -85,12 +86,12 @@ function gameplay(x) {
       console.log("Miss btn");
       document.getElementById("txt").innerHTML = "Miss";
       document.getElementById("score").innerHTML = count;
-      count--;
+      count++;
     }
   });
 }
 
-function countdown() {
+function countdown() { // Count countdown the time with milisecond
   var time = 3;
   var main = setInterval(function () {
     time--;
@@ -103,7 +104,7 @@ function countdown() {
   }, 1000);
 }
 
-function start() {
+function start() { // First Of Anything
   count = 0;
   document.getElementById("time").style.display = "block";
   document.getElementById("type").style.display = "block";
@@ -112,14 +113,14 @@ function start() {
   countdown();
 }
 
-function stop() {
+function stop() { // Function When Cick Stop Button
   end();
   document.getElementById("stop_btn").style.display = "none";
   document.getElementById("start_btn").style.display = "none";
   document.getElementById("type").style.display = "none";
 }
 
-function end() {
+function end() { // End The Game
   object1.style.animation = "none";
   object2.style.animation = "none";
   object3.style.animation = "none";
@@ -131,32 +132,32 @@ function end() {
   document.getElementById("restart_btn").style.display = "block";
 }
 
-function restart() {
+function restart() { // Restart The Game but i don't like this way (by Oat)
   window.location.reload(true);
 }
 
-function swap() {
+function swap() { // Stop Animation When Switch the Level
   object1.style.animation = "none";
   object2.style.animation = "none";
   object3.style.animation = "none";
   object4.style.animation = "none";
 }
 
-function level1() {
+function level1() { // Level1
   object1.style.animation = "block1 9s infinite";
   object2.style.animation = "block2 3s infinite";
   object3.style.animation = "block3 5s infinite";
   object4.style.animation = "block4 2s infinite";
 }
 
-function level2() {
+function level2() { // Level2
   object1.style.animation = "block1 4s infinite";
   object2.style.animation = "block2 2s infinite";
   object3.style.animation = "block3 7s infinite";
   object4.style.animation = "block4 5s infinite";
 }
 
-function level3() {
+function level3() { // Level3
   object1.style.animation = "block1 4s infinite";
   object2.style.animation = "block2 5s infinite";
   object3.style.animation = "block3 6s infinite";
