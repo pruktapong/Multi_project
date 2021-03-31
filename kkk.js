@@ -7,6 +7,7 @@ var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
 var count = 0;
+var check = 0;
 var topscore = 0;
 
 document.getElementById("restart_btn").style.display = "none";
@@ -36,14 +37,14 @@ function gameplay(x) {
     if (count >= -1) {
       level1();
     }
-    if (count == 20) {
-      count++;
+    if (count == 20 && check == 0) {
+      check++;
       swap();
       alert("Level 2!!!");
       level2();
     }
-    if (count == 50) {
-      count++;
+    if (count == 50 && check == 1) {
+      check++;
       swap();
       alert("Level 3!!!");
       level3();
@@ -113,7 +114,6 @@ function start() {
 
 function stop() {
   end();
-  alert("Stop the game!");
   document.getElementById("stop_btn").style.display = "none";
   document.getElementById("start_btn").style.display = "none";
   document.getElementById("type").style.display = "none";
@@ -143,22 +143,22 @@ function swap() {
 }
 
 function level1() {
-  object1.style.animation = "block1 10s infinite";
-  object2.style.animation = "block2 4s infinite";
-  object3.style.animation = "block3 6s infinite";
-  object4.style.animation = "block4 3s infinite";
+  object1.style.animation = "block1 9s infinite";
+  object2.style.animation = "block2 3s infinite";
+  object3.style.animation = "block3 5s infinite";
+  object4.style.animation = "block4 2s infinite";
 }
 
 function level2() {
-  object1.style.animation = "block1 5s infinite";
-  object2.style.animation = "block2 3s infinite";
-  object3.style.animation = "block3 8s infinite";
-  object4.style.animation = "block4 6s infinite";
+  object1.style.animation = "block1 4s infinite";
+  object2.style.animation = "block2 2s infinite";
+  object3.style.animation = "block3 7s infinite";
+  object4.style.animation = "block4 5s infinite";
 }
 
 function level3() {
-  object1.style.animation = "block1 6s infinite";
-  object2.style.animation = "block2 8s infinite";
-  object3.style.animation = "block3 3s infinite";
+  object1.style.animation = "block1 4s infinite";
+  object2.style.animation = "block2 5s infinite";
+  object3.style.animation = "block3 6s infinite";
   object4.style.animation = "block4 2s infinite";
 }
