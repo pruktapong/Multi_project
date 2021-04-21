@@ -3,27 +3,41 @@ var count = 0;
 function moveLeft() {
   var left = parseInt(
     window.getComputedStyle(button).getPropertyValue("left"));
-  left -= 100;
-  if(left >= 0){
+  left = 0;
   button.style.left = left + "px";
-  }
-}
 
+}
 function moveRight() {
   var left = parseInt(
     window.getComputedStyle(button).getPropertyValue("left"));
-  left += 100;
-  if(left < 400){
+  left = 100;
   button.style.left = left + "px";
-  }
+}
+function moveUp() {
+  var left = parseInt(
+    window.getComputedStyle(button).getPropertyValue("left"));
+  left = 200;
+  button.style.left = left + "px";
+}
+function moveDown() {
+  var left = parseInt(
+    window.getComputedStyle(button).getPropertyValue("left"));
+  left = 300;
+  button.style.left = left + "px";
 }
 
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") {
+document.addEventListener("keyup", (event) => {
+  if (event.key === "q") {
     moveLeft();
   }
-  if (event.key === "ArrowRight") {
+  if (event.key === "e")  {
+    moveUp();
+  }
+  if (event.key === "r") {
+    moveDown();
+  }
+  if (event.key === "w") {
     moveRight();
   }
 });
@@ -49,6 +63,7 @@ setInterval(() => {
     //block.style.animation = "none";
     //window.location.reload();
     console.log("hit");
+    document.getElementById("score").innerHTML = count;
   }
   if (count%5 == 0) {
     console.log("Next Level!!!");
@@ -58,10 +73,10 @@ setInterval(() => {
     document.getElementById("block").style.animation = "slide 1s infinite";
   }
   if (count == 21) {
-    document.getElementById("block").style.animation = "slide 0.7s infinite";
+    document.getElementById("block").style.animation = "slide 0.8s infinite";
   }
   if (count == 31) {
-    document.getElementById("block").style.animation = "slide 0.3s infinite";
+    document.getElementById("block").style.animation = "slide 0.5s infinite";
   }
 }, 100);
 
