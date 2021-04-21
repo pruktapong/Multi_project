@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#game
+{
+  width: 400px;
+  height: 600px;
+  border: 2px solid black;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+#button
+{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  top: 400px;
+  left: 100px;
+}
+
+#block
+{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  animation: slide 1s infinite;
+}
+
+#left, #right
+{
+  width: 50%;
+  position: absolute;
+  height: 600px;
+}
+
+#right
+{
+  left: 50%;
+}
+
+#white
+{
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  position: absolute;
+  top: 600px;
+  z-index: 1000;
+}
+@keyframes slide {
+  0% {top: -100px;}
+  100% {top: 600px;}
+}
