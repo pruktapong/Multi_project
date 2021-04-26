@@ -1,0 +1,107 @@
+body{
+  background-size:cover;
+  overflow: hidden;
+  
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.background{
+  height: 750px;
+  width: 1535px;
+  position: absolute;
+  z-index: -500;
+}
+#game
+{
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  background-color: #0002;
+  
+}
+
+#block
+{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  animation: slide 1s infinite;
+}
+
+
+#white
+{
+  width: 400px;
+  height: 120px;
+  background-color: #87CEEB;
+  position: absolute;
+  top: 600px;
+  z-index: 1000;
+}
+@keyframes slide {
+  0% {top: -100px;}
+  100% {top: 600px;}
+}
+#button
+{
+  width: 100px;
+  height: 100px;
+  background-color: #0009;
+  opacity: 25%;
+  position: relative;
+  z-index:1;
+  top: 400px;
+  left: 100px;
+}
+#button1{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: relative;
+  top: 300px;
+  left: 0px;
+  z-index: -1;
+}
+#button2{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  top: 200px;
+  left: 100px;
+  z-index: -1;
+}
+#button3{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  z-index: -1;
+}
+#button4{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  z-index: -1;
+}
+#score{
+  font-size: 25px;
+  color:black;
+  position:absolute;
+  z-index: 1001;
+  right:50%;
+
+}
+svg{
+  background:#87CEEB;
+  position:absolute;
+  z-index:-500;
+}
