@@ -2,6 +2,7 @@ var count = 0;
 var point = 0;
 var check = 1;
 var block = document.getElementById("block");
+var xxx = 500;
 
 function start() {
     block.style.animation = "slide 1.5s infinite";
@@ -36,27 +37,30 @@ block.addEventListener('animationiteration', () => {
       console.log("hit4");
       check = 0
     }
-    else if (check_y <= 500){
+    else if (check_y <= 500 && check != 2){
       console.log("up");
       point--;
-      element.style.animation = 'none';
-      element.offsetWidth;
-      element.style.animation = 'slide 1.5s infinite';
-      document.getElementById("score").innerHTML = point;
+      check = 2
     }
 
 
   });
   setInterval(() => {
     var check_y = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
-    if (check == 0 && check_y > 600){
+    if (check == 0 && check_y > 600 && check_y < 650){
       console.log("hitttt");
       check = 1;
       point++;
+      document.getElementById("score").innerHTML = point;
     }
-    else if (check == 1 && check_y > 600){
+    else if (check == 1 && check_y > 600 && check_y < 650){
       console.log("miss");
       point--;
+      document.getElementById("score").innerHTML = point;
+    }
+    else if (check == 2 && check_y > 600 && check_y < 650){
+      console.log("upppp");
+      check = 1;
     }
     document.getElementById("score").innerHTML = point;
-  },500)
+  },xxx)
