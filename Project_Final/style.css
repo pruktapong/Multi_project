@@ -43,7 +43,7 @@ body{
 }
 @keyframes slide {
   0% {top: -100px;}
-  100% {top: 600px;}
+  100% {top: 700px;}
 }
 #button
 {
