@@ -2,7 +2,9 @@ var count = 0;
 var point = 0;
 var check = 1;
 var block = document.getElementById("block");
-var value = 250;
+var value = 500;
+var live = 15;
+var img = document.getElementById("background");
 
 function start() {
     block.style.animation = "slide 1.5s infinite";
@@ -19,7 +21,6 @@ block.addEventListener('animationiteration', () => {
 
   document.addEventListener("keyup", (event) => {
 
-    var element = document.getElementById("block");
     var check_x = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var check_y = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
 
@@ -55,9 +56,10 @@ block.addEventListener('animationiteration', () => {
 
     else if (check_y <= 500 && check != 2){
       console.log("up");
-      point--;
+      live--;
       check = 2
       document.getElementById("score").innerHTML = point;
+      document.getElementById("live").innerHTML = "live : " + live;
     }
 
 
@@ -72,12 +74,36 @@ block.addEventListener('animationiteration', () => {
     }
     else if (check == 1 && check_y > 600){
       console.log("miss");
-      point--;
+      live--;
       document.getElementById("score").innerHTML = point;
+      document.getElementById("live").innerHTML = "live : " + live;
     }
     else if (check == 2 && check_y > 600){
       console.log("upppp");
       check = 1;
       document.getElementById("score").innerHTML = point;
     }
-  }, value)
+    if (live == 10) {
+      img.src = 'img/ระดับ2.jpg';
+    }
+    if (live == 5) {
+      img.src = 'img/ระดับ3.jpg';
+    }
+    if (live == 0) {
+      img.src = 'img/ระดับ4.jpg';
+    }
+    if (live == -1){
+      alert("ขยะเน่าแล้วไอเวรร");
+      location.reload();
+    }
+    if (point == 10) {
+      document.getElementById("block").style.animation = "slide 1s infinite";
+    }
+    if (point == 20) {
+      document.getElementById("block").style.animation = "slide 0.95s infinite";
+    }
+    if (point == 30) {
+      document.getElementById("block").style.animation = "slide 0.75s infinite";
+    }
+
+  }, value);

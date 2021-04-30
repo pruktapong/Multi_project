@@ -7,7 +7,7 @@ body{
   margin: 0;
   padding: 0;
 }
-.background{
+#background{
   height: 750px;
   width: 1535px;
   position: absolute;
@@ -35,7 +35,7 @@ body{
 #white
 {
   width: 400px;
-  height: 120px;
+  height: 160px;
   background-color: #87CEEB;
   position: absolute;
   top: 600px;
@@ -98,6 +98,13 @@ body{
   position:absolute;
   z-index: 1001;
   right:50%;
+
+}
+#live{
+  font-size: 25px;
+  color:black;
+  position:relative;
+  z-index: 1001;
 
 }
 svg{
