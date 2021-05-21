@@ -49,7 +49,6 @@ body{
 {
   width: 100px;
   height: 100px;
-  background-color: #0009;
   opacity: 25%;
   position: relative;
   z-index:1;
@@ -107,8 +106,90 @@ body{
   z-index: 1001;
 
 }
+#minutes{
+  font-size: 25px;
+  color:black;
+  position:absolute;
+  z-index: 1001;
+
+}
+#seconds{
+  font-size: 25px;
+  color:black;
+  position:absolute;
+  margin-left:30px;
+  z-index: 1001;
+
+}
+#minutes2{
+  font-size: 25px;
+  color:black;
+  position:absolute;
+  z-index: 1001;
+
+}
+#seconds2{
+  font-size: 25px;
+  color:black;
+  position:absolute;
+  margin-left:30px;
+  z-index: 1001;
+
+}
 svg{
   background:#87CEEB;
   position:absolute;
   z-index:-500;
+}
+.board {
+  width: 520px;
+  height: 220px;
+  border-radius: 50px;
+  display:none;
+  top:33%;
+  left:33%;
+  position:absolute;
+}
+#board {
+  background-color: #D3D3D3;
+  border: 10px solid #BEBEBE;
+}
+h1{
+  text-align: center;
+  color:#B22222;
+}
+#text1{
+  margin: 25px;
+  margin-left:50px;
+  display: inline-block;
+}
+#text2{
+  margin-left: 50px;
+  display: inline-block;
+}
+#score2{
+  display: inline-block;
+}
+#time2{
+  display: inline-block;
+}
+.link {
+  text-decoration:none;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  margin:70px;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: absolute;
+  top:100px;
+  left:0px;
+}
+.link:hover {
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+.botton {
+  padding: 10px 20px 10px 20px;
 }

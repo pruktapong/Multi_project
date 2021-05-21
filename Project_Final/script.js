@@ -3,6 +3,26 @@ var check = 1;
 var block = document.getElementById("block");
 var live = 15;
 var img = document.getElementById("background");
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+var myTime = setInterval(setTime, 1000);
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } 
+  else {
+    return valString;
+  }
+}
 
 function start() {
   block.style.animation = "slide 1.5s infinite";
@@ -69,7 +89,7 @@ document.addEventListener("keyup", (event) => {//Get event.key
   }
 });
 
-setInterval(() => {//Condition Gameplay(Check Miss)
+var timer = setInterval(() => {//Condition Gameplay(Check Miss)
   var check_y = parseInt(
     window.getComputedStyle(block).getPropertyValue("top")
   );
@@ -97,6 +117,12 @@ setInterval(() => {//Condition Gameplay(Check Miss)
     img.src = "img/ระดับ4.jpg";
   }
   if (live == -1) {
+    document.getElementById("board").style.display = "block";
+    document.getElementById("game").style.display = "none";
+    document.getElementById("score2").innerHTML = point;
+    document.getElementById("minutes2").innerHTML = pad(parseInt(totalSeconds / 60));
+    document.getElementById("seconds2").innerHTML = pad(totalSeconds % 60);
+    myStopFunction();
     //location.reload();
     //alert("ขยะเน่าแล้วไอเวรร");
   }
@@ -110,4 +136,8 @@ setInterval(() => {//Condition Gameplay(Check Miss)
     block.style.animation = "slide 0.5s infinite";
   }
   console.log(value);
-}, 400);
+}, 450);
+function myStopFunction() {
+  clearInterval(myTime);
+  clearInterval(timer);
+}
