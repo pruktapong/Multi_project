@@ -26,11 +26,11 @@ body{
 {
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-size: 150px 150px;
+  background-position: center;
   position: relative;
-  animation: slide 1s infinite;
+  animation: none;
 }
-
 
 #white
 {

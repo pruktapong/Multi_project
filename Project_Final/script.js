@@ -3,6 +3,7 @@ var check = 1;
 var block = document.getElementById("block");
 var live = 15;
 var img = document.getElementById("background");
+var img2 = document.getElementById("block");
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
@@ -24,10 +25,43 @@ function pad(val) {
   }
 }
 
-function start() {
+setTimeout(function start() {
   block.style.animation = "slide 1.5s infinite";
-}
-
+}, 3000);
+block.addEventListener("animationiteration", () => {
+  var random_img = Math.floor(Math.random() * 10);
+  console.log(random_img);
+  if (random_img == 0) {
+    img2.src = "img/object1.png";
+  }
+  if (random_img == 1) {
+    img2.src = "img/object2.png";
+  }
+  if (random_img == 2) {
+    img2.src = "img/object3.png";
+  }
+  if (random_img == 3) {
+    img2.src = "img/object4.png";
+  }
+  if (random_img == 4) {
+    img2.src = "img/object5.png";
+  }
+  if (random_img == 5) {
+    img2.src = "img/object6.png";
+  }
+  if (random_img == 6) {
+    img2.src = "img/object7.png";
+  }
+  if (random_img == 7) {
+    img2.src = "img/object8.png";
+  }
+  if (random_img == 8) {
+    img2.src = "img/object9.png";
+  }
+  if (random_img == 9) {
+    img2.src = "img/object10.png";
+  }
+});
 block.addEventListener("animationiteration", () => {//Random block
   var random = Math.floor(Math.random() * 4);
   left = random * 100;
@@ -126,17 +160,17 @@ var timer = setInterval(() => {//Condition Gameplay(Check Miss)
     //location.reload();
     //alert("ขยะเน่าแล้วไอเวรร");
   }
-  if (point == 5) {
+  if (point == 5 && check_y > 600) {
     block.style.animation = "slide 0.95s infinite";
   }
-  if (point == 10) {
-    block.style.animation = "slide 0.75s infinite";
+  if (point == 10 && check_y > 600) {
+    block.style.animation = "slide 0.85s infinite";
   }
-  if (point == 15) {
-    block.style.animation = "slide 0.5s infinite";
+  if (point == 15 && check_y > 600) {
+    block.style.animation = "slide 0.70s infinite";
   }
-  console.log(value);
-}, 450);
+}, 550);
+
 function myStopFunction() {
   clearInterval(myTime);
   clearInterval(timer);
