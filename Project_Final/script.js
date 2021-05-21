@@ -1,16 +1,12 @@
-var count = 0;
 var point = 0;
 var check = 1;
 var block = document.getElementById("block");
-var value = 500;
 var live = 15;
 var img = document.getElementById("background");
 
 function start() {
   block.style.animation = "slide 1.5s infinite";
 }
-
-var block = document.getElementById("block");
 
 block.addEventListener("animationiteration", () => {//Random block
   var random = Math.floor(Math.random() * 4);
@@ -97,20 +93,21 @@ setInterval(() => {//Condition Gameplay(Check Miss)
   if (live == 5) {
     img.src = "img/ระดับ3.jpg";
   }
-  if (live == 0) {
+  if (live == 2) {
     img.src = "img/ระดับ4.jpg";
   }
   if (live == -1) {
-    alert("ขยะเน่าแล้วไอเวรร");
-    location.reload();
+    //location.reload();
+    //alert("ขยะเน่าแล้วไอเวรร");
+  }
+  if (point == 5) {
+    block.style.animation = "slide 0.95s infinite";
   }
   if (point == 10) {
-    document.getElementById("block").style.animation = "slide 1s infinite";
+    block.style.animation = "slide 0.75s infinite";
   }
-  if (point == 20) {
-    document.getElementById("block").style.animation = "slide 0.95s infinite";
+  if (point == 15) {
+    block.style.animation = "slide 0.5s infinite";
   }
-  if (point == 30) {
-    document.getElementById("block").style.animation = "slide 0.75s infinite";
-  }
-}, value);
+  console.log(value);
+}, 400);
