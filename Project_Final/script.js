@@ -10,10 +10,13 @@ var totalSeconds = 0;
 var myTime = setInterval(setTime, 1000);
 
 function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  setTimeout(function(){
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  }, 3000);
 }
+
 
 function pad(val) {
   var valString = val + "";
