@@ -9,11 +9,21 @@
 </head>
 <body>
   <img id="background" src="img/ระดับ1.jpg" alt="">
-  <div class="board" id="board">
+  <div id="howtoplay">
+  <button id="back" onclick="backtowebsite()">back</button>
+  </div>
+  <div id="menu">
+    <img id="logo" src="img/logo.png"></img>
+    <button id="play" onclick="first()">play</button>
+    <button id="how" onclick="howtoplay()">How To Play</button>
+    <button id="web" onclick="website()">Website</button>
+  </div>
+  <div id="board">
     <h1>Game Over!</h1>
     <h2 id="text1">Your score: <div id="score2">0</div></h2>
     <h2 id="text2">Your time: <label id="minutes2">00</label> <label id="seconds2">00</label></h2>
-    <a href="https://gracious-minsky-279da1.netlify.app/index.html" class="link botton">landing page</a>
+    <button id="link" onclick="website()">Website</button>
+    <button id="menubut" onclick="reload()">Menu</button>
   </div>
   <div id="game">
     <img id="block" src="img/object5.png"></img>

@@ -19,14 +19,13 @@ body{
   height: 600px;
   margin: auto;
   background-color: #0002;
-  
+  display:none;
 }
 
 #block
 {
   width: 100px;
   height: 100px;
-  background-size: 150px 150px;
   background-position: center;
   position: relative;
   animation: none;
@@ -59,37 +58,53 @@ body{
   width: 100px;
   height: 100px;
   background-color: green;
+  background: url(img/bin1.png);
+  background-size: 95px 95px;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   top: 300px;
   left: 0px;
-  z-index: -1;
+  z-index: 1;
 }
 #button2{
   width: 100px;
   height: 100px;
   background-color: red;
+  background: url(img/bin2.png);
+  background-size: 95px 95px;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   top: 200px;
   left: 100px;
-  z-index: -1;
+  z-index: 1;
 }
 #button3{
   width: 100px;
   height: 100px;
   background-color: blue;
+  background: url(img/bin3.png);
+  background-size: 95px 95px;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   top: 100px;
   left: 200px;
-  z-index: -1;
+  z-index: 1;
 }
 #button4{
   width: 100px;
   height: 100px;
   background-color: orange;
+  background: url(img/bin4.png);
+  background-size: 95px 95px;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   top: 0px;
   left: 300px;
-  z-index: -1;
+  z-index: 1;
 }
 #score{
   font-size: 25px;
@@ -141,7 +156,8 @@ svg{
   position:absolute;
   z-index:-500;
 }
-.board {
+
+#board {
   width: 520px;
   height: 220px;
   border-radius: 50px;
@@ -149,8 +165,6 @@ svg{
   top:33%;
   left:33%;
   position:absolute;
-}
-#board {
   background-color: #D3D3D3;
   border: 10px solid #BEBEBE;
 }
@@ -173,8 +187,9 @@ h1{
 #time2{
   display: inline-block;
 }
-.link {
+#link {
   text-decoration:none;
+  font-size:20px;
   border: 2px solid #1a3131;
   padding:10px 20px 10px 20px;
   border-radius:15px;
@@ -186,10 +201,141 @@ h1{
   top:100px;
   left:0px;
 }
-.link:hover {
+#link:hover {
   color:#FFFFFF;
   background-color:#1a3131;
 }
-.botton {
-  padding: 10px 20px 10px 20px;
+#link:active{
+  transform: scale(0.90);
+}
+iframe{
+  position: absolute;
+  opacity: 0;
+}
+#menu{
+  position: absolute;
+}
+#logo{
+  width: 850px;
+  height:300px;
+  margin-left:50%;
+  position: absolute;
+}
+#play{
+  text-decoration:none;
+  font-size:20px;
+  height:50px;
+  width:150px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: relative;
+  left:150%;
+  top:350px;
+}
+#play:hover{
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+#play:active{
+  transform: scale(0.90);
+}
+#how{
+  text-decoration:none;
+  font-size:15px;
+  height:50px;
+  width:150px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: relative;
+  left:116.5%;
+  top:450px;
+}
+#how:hover{
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+#how:active{
+  transform: scale(0.90);
+}
+#web{
+  text-decoration:none;
+  font-size:20px;
+  height:50px;
+  width:150px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: relative;
+  left:82.5%;
+  top:550px;
+}
+#web:hover{
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+#web:active{
+  transform: scale(0.90);
+}
+#howtoplay{
+  width:800px;
+  height:600px;
+  border-radius: 50px;
+  background-color: #D3D3D3;
+  border: 10px solid #BEBEBE;
+  display:none;
+  margin:auto;
+}
+#back{
+  text-decoration:none;
+  font-size:20px;
+  height:50px;
+  width:100px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: relative;
+  margin:10px;
+  left:85%;
+}
+#back:hover{
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+#back:active{
+  transform: scale(0.90);
+}
+#menubut{
+  text-decoration:none;
+  font-size: 20px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  color:#1a3131;
+  margin:70px;
+  background: #bbc7cc;
+  font-family: "Lucida Console";
+  position: absolute;
+  top:100px;
+  left:250px;
+}
+#menubut:hover{
+  color:#FFFFFF;
+  background-color:#1a3131;
+}
+#menubut:active{
+  transform: scale(0.90);
 }

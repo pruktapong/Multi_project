@@ -7,16 +7,28 @@ var img2 = document.getElementById("block");
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-var myTime = setInterval(setTime, 1000);
+function reload(){
+  location.reload();
+}
+function backtowebsite(){
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("howtoplay").style.display = "none";
+  document.getElementById("board").style.display = "none";
+  document.getElementById("game").style.display = "none";
 
+}
+function howtoplay(){
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("howtoplay").style.display = "block";
+}
 function setTime() {
   setTimeout(function(){
     ++totalSeconds;
     secondsLabel.innerHTML = pad(totalSeconds % 60);
     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
   }, 3000);
+  
 }
-
 
 function pad(val) {
   var valString = val + "";
@@ -27,10 +39,17 @@ function pad(val) {
     return valString;
   }
 }
-
-setTimeout(function start() {
-  block.style.animation = "slide 1.5s infinite";
-}, 3000);
+function website(){
+  window.open('https://gracious-minsky-279da1.netlify.app/', '_blank');
+}
+function first(){
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("game").style.display = "block";
+  setInterval(setTime, 1000);
+  setTimeout(function start() {
+    block.style.animation = "slide 1.5s infinite";
+  }, 3000);
+}
 block.addEventListener("animationiteration", () => {
   var random_img = Math.floor(Math.random() * 10);
   console.log(random_img);
@@ -87,6 +106,7 @@ document.addEventListener("keyup", (event) => {//Get event.key
     point++;
     check = 0;
     document.getElementById("score").innerHTML = point;
+
   } else if (
     event.key === "w" &&
     check_x == 100 &&
@@ -175,6 +195,6 @@ var timer = setInterval(() => {//Condition Gameplay(Check Miss)
 }, 550);
 
 function myStopFunction() {
-  clearInterval(myTime);
+  clearInterval(setTime);
   clearInterval(timer);
 }
