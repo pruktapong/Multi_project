@@ -7,42 +7,39 @@ var img2 = document.getElementById("block");
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-function reload(){
+function reload() {
   location.reload();
 }
-function backtowebsite(){
+function backtowebsite() {
   document.getElementById("menu").style.display = "block";
   document.getElementById("howtoplay").style.display = "none";
   document.getElementById("board").style.display = "none";
   document.getElementById("game").style.display = "none";
-
 }
-function howtoplay(){
+function howtoplay() {
   document.getElementById("menu").style.display = "none";
   document.getElementById("howtoplay").style.display = "block";
 }
 function setTime() {
-  setTimeout(function(){
+  setTimeout(function () {
     ++totalSeconds;
     secondsLabel.innerHTML = pad(totalSeconds % 60);
     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
   }, 3000);
-  
 }
 
 function pad(val) {
   var valString = val + "";
   if (valString.length < 2) {
     return "0" + valString;
-  } 
-  else {
+  } else {
     return valString;
   }
 }
-function website(){
-  window.open('https://gracious-minsky-279da1.netlify.app/', '_blank');
+function website() {
+  window.open("https://gracious-minsky-279da1.netlify.app/", "_blank");
 }
-function first(){
+function first() {
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "block";
   setInterval(setTime, 1000);
@@ -84,15 +81,18 @@ block.addEventListener("animationiteration", () => {
     img2.src = "img/object10.png";
   }
 });
-block.addEventListener("animationiteration", () => {//Random block
-  var random = Math.floor(Math.random() * 4);
+block.addEventListener("animationiteration", () => {
+  //Random block
+  var random = Math.floor(Math.random() * 5);
   left = random * 100;
   block.style.left = left + "px";
   //console.log(random);
 });
 
-document.addEventListener("keyup", (event) => {//Get event.key
-  var check_x = parseInt(//Get Value from block for check condition
+document.addEventListener("keyup", (event) => {
+  //Get event.key
+  var check_x = parseInt(
+    //Get Value from block for check condition
     window.getComputedStyle(block).getPropertyValue("left")
   );
   var check_y = parseInt(
@@ -101,12 +101,12 @@ document.addEventListener("keyup", (event) => {//Get event.key
 
   //console.log(event.key);
 
-  if (event.key == "q" && check_x == 0 && check_y <= 600 && check_y > 500) {//Condition Gameplay(main)
+  if (event.key == "q" && check_x == 0 && check_y <= 600 && check_y > 500) {
+    //Condition Gameplay(main)
     console.log("hit1");
     point++;
     check = 0;
     document.getElementById("score").innerHTML = point;
-
   } else if (
     event.key === "w" &&
     check_x == 100 &&
@@ -137,6 +137,16 @@ document.addEventListener("keyup", (event) => {//Get event.key
     point++;
     check = 0;
     document.getElementById("score").innerHTML = point;
+  } else if (
+    event.key === "t" &&
+    check_x == 400 &&
+    check_y <= 600 &&
+    check_y > 500
+  ) {
+    console.log("hit5");
+    point++;
+    check = 0;
+    document.getElementById("score").innerHTML = point;
   } else if (check_y <= 500 && check != 2) {
     console.log("up");
     live--;
@@ -146,7 +156,8 @@ document.addEventListener("keyup", (event) => {//Get event.key
   }
 });
 
-var timer = setInterval(() => {//Condition Gameplay(Check Miss)
+var timer = setInterval(() => {
+  //Condition Gameplay(Check Miss)
   var check_y = parseInt(
     window.getComputedStyle(block).getPropertyValue("top")
   );
@@ -177,7 +188,9 @@ var timer = setInterval(() => {//Condition Gameplay(Check Miss)
     document.getElementById("board").style.display = "block";
     document.getElementById("game").style.display = "none";
     document.getElementById("score2").innerHTML = point;
-    document.getElementById("minutes2").innerHTML = pad(parseInt(totalSeconds / 60));
+    document.getElementById("minutes2").innerHTML = pad(
+      parseInt(totalSeconds / 60)
+    );
     document.getElementById("seconds2").innerHTML = pad(totalSeconds % 60);
     myStopFunction();
     //location.reload();

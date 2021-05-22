@@ -8,14 +8,14 @@ body{
   padding: 0;
 }
 #background{
-  height: 750px;
-  width: 1535px;
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: -500;
 }
 #game
 {
-  width: 400px;
+  width: 500px;
   height: 600px;
   margin: auto;
   background-color: #0002;
@@ -33,7 +33,7 @@ body{
 
 #white
 {
-  width: 400px;
+  width: 500px;
   height: 160px;
   background-color: #87CEEB;
   position: absolute;
@@ -58,7 +58,7 @@ body{
   width: 100px;
   height: 100px;
   background-color: green;
-  background: url(img/bin1.png);
+  background: url(/img/bin1.png);
   background-size: 95px 95px;
   background-repeat: no-repeat;
   background-position: center;
@@ -104,6 +104,19 @@ body{
   position: relative;
   top: 0px;
   left: 300px;
+  z-index: 1;
+}
+#button5{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  background: url(img/bin4.png);
+  background-size: 95px 95px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: -100px;
+  left: 400px;
   z-index: 1;
 }
 #score{
