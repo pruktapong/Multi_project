@@ -194,7 +194,7 @@ var timer = setInterval(() => {
     document.getElementById("minutes2").innerHTML = pad(
       parseInt(totalSeconds / 60)
     );
-    document.getElementById("seconds2").innerHTML = pad(totalSeconds % 60);
+    document.getElementById("seconds2").innerHTML = ": " +pad(totalSeconds % 60);
     myStopFunction();
     //location.reload();
     //alert("ขยะเน่าแล้วไอเวรร");
