@@ -24,6 +24,7 @@ body{
 
 #block
 {
+  top:-100px;
   width: 100px;
   height: 100px;
   background-position: center;
@@ -34,7 +35,7 @@ body{
 #white
 {
   width: 500px;
-  height: 160px;
+  height: 200px;
   background-color: #87CEEB;
   position: absolute;
   top: 600px;
@@ -58,7 +59,7 @@ body{
   width: 100px;
   height: 100px;
   background-color: green;
-  background: url(/img/bin1.png);
+  background: url(img/bin1.png);
   background-size: 95px 95px;
   background-repeat: no-repeat;
   background-position: center;
@@ -351,4 +352,11 @@ iframe{
 }
 #menubut:active{
   transform: scale(0.90);
+}
+
+#countdown{
+  position: absolute;
+  left: 48%;
+  font-size: 100px;
+  font-family: "Lucida Console";
 }
