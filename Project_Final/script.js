@@ -25,7 +25,7 @@ function setTime() {
     ++totalSeconds;
     secondsLabel.innerHTML = ": " + pad(totalSeconds % 60);
     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-  }, 000);
+  }, 3000);
 }
 
 function pad(val) {
@@ -45,7 +45,7 @@ function first() {
   setInterval(setTime, 1000);
   setTimeout(function start() {
     block.style.animation = "slide 1.5s infinite";
-  }, 000);
+  }, 3000);
 }
 block.addEventListener("animationiteration", () => {
   var random_img = Math.floor(Math.random() * 10);
