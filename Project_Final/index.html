@@ -34,24 +34,27 @@
         &emsp;&emsp;&emsp;ทันหรือผู้เล่นกดก่อนที่ขยะจะถึงตำแหน่งของถังขยะแต่ละถัง พลังชีวิต (live) ของผู้เล่นจะถูก<br>
         &emsp;&emsp;&emsp;ลบครั้งละ 1&emsp;"เกมจะจบก็ต่อเมื่อพลังชีวิตของผู้เล่นลดลงจนเหลือ 0"
         </h3></h2><br><br>
-  <button id="back" onclick="backtowebsite()">back</button>
+  <button id="back" onclick="backtowebsite()">
+    <h6>Back</h6>
+    <div class="liquid"></div>
+    </button>
   </div>
   <div id="menu">
     <img id="logo" src="img/logo.png"></img>
     <button id="play" onclick="first()">
-      <span>Play</span>
+      <h6>Play</h6>
       <div class="liquid"></div>
     </button>
     <button id="how" onclick="howtoplay()">
-      <span>How To Play</span>
+      <h6>How To Play</h6>
       <div class="liquid"></div>
     </button>
     <button id="know" onclick="howtoplay()">
-      <span>Knowledge</span>
+      <h6>Knowledge</h6>
       <div class="liquid"></div>
     </button>
     <button id="web" onclick="website()">
-      <span>Website</span>
+      <h6>Website</h6>
       <div class="liquid"></div>
     </button>
   </div>
@@ -59,8 +62,14 @@
     <h1>Game Over!</h1>
     <h2 id="text1">Your score : <div id="score2">0</div></h2>
     <h2 id="text2">Your time : <label id="minutes2">00</label> <label id="seconds2">00</label></h2>
-    <button id="link" onclick="website()">Website</button>
-    <button id="menubut" onclick="reload()">Menu</button>
+    <button id="link" onclick="website()">
+      <h6>Website</h6>
+      <div class="liquid"></div>
+      </button>
+    <button id="menubut" onclick="reload()">
+      <h6>Menu</h6>
+      <div class="liquid"></div>
+      </button>
   </div>
   <div id="game">
     <img id="block" src="img/object7.png"></img>
@@ -72,9 +81,9 @@
     <div id="button4"></div>
     <div id="button5"></div>
     <img id="white" src="img/recycle.png"></img>
-    <div id="score">0</div>
-    <div id="live">live : 15</div>
-    <div id="time"><label id="minutes">00</label> <label id="seconds">: 00</label></div>
+    <h4 id="score">0</h4>
+    <h4 id="live">live : 15</h4>
+    <h4 id="time"><label id="minutes">00</label> <label id="seconds">: 00</label></h4>
   </div>
   <script src="script.js"></script>
 </body>
