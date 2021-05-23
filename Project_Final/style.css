@@ -230,61 +230,15 @@ iframe{
   position: absolute;
 }
 #logo{
-  bottom: -500px;
-  width: 50vw;
-  height:500px;
-  margin-left:25vw;
-  position: absolute;
+  width: 40vw;
+  margin-left:30vw;
+  position: relative;
 }
-#play{
+#play, #how, #web{
   text-decoration:none;
-  font-size:20px;
-  height:50px;
-  width:150px;
-  border: 2px solid #1a3131;
-  padding:10px 20px 10px 20px;
-  border-radius:15px;
-  color:#1a3131;
-  background: #bbc7cc;
-  font-family: "Lucida Console";
-  position: absolute;
-  left: 46.4vw;
-  top: 60vh;
-}
-#play:hover{
-  color:#FFFFFF;
-  background-color:#1a3131;
-}
-#play:active{
-  transform: scale(0.90);
-}
-#how{
-  text-decoration:none;
-  font-size:15px;
-  height:50px;
-  width:150px;
-  border: 2px solid #1a3131;
-  padding:10px 20px 10px 20px;
-  border-radius:15px;
-  color:#1a3131;
-  background: #bbc7cc;
-  font-family: "Lucida Console";
-  position: absolute;
-  left: 46.4vw;
-  top:75vh;
-}
-#how:hover{
-  color:#FFFFFF;
-  background-color:#1a3131;
-}
-#how:active{
-  transform: scale(0.90);
-}
-#web{
-  text-decoration:none;
-  font-size:20px;
-  height:50px;
-  width:150px;
+  
+  height:80px;
+  width:200px;
   border: 2px solid #1a3131;
   padding:10px 20px 10px 20px;
   border-radius:15px;
@@ -292,15 +246,27 @@ iframe{
   background: #bbc7cc;
   font-family: "Lucida Console";
   position: relative;
-  left:46.4vw;
-  top:90vh;
+  display: block;
+  left: 45vw;
 }
-#web:hover{
+#play:hover, #how:hover, #web:hover{
   color:#FFFFFF;
   background-color:#1a3131;
 }
-#web:active{
+#play:active, #how:active, #web:active{
   transform: scale(0.90);
+}
+#play{
+  font-size:20px;
+  top: 5vh;
+}
+#how{
+  font-size:15px;
+  top:10vh;
+}
+#web{
+  font-size:20px;
+  top:15vh;
 }
 #howtoplay{
   width:800px;
