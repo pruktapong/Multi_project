@@ -10,18 +10,33 @@
 <body>
   <img id="background" src="img/ระดับ1.jpg" alt="">
   <div id="howtoplay">
+    <h1>คำแนะนำการเล่น</h1><br>
+
+      <h2>ปุ่มคีย์บอร์ดสำหรับเล่น :</h2><br><br>
+      <h3>q(สำหรับถังขยะสีเขียว)<br></h3>
+      <h3>w(สำหรับถังขยะสีแดง)<br></h3>
+      <h3>e(สำหรับถังขยะสีน้ำเงิน)<br></h3>
+      <h3>r(สำหรับถังขยะสีเหลือง)<br></h3>
+      <h3>t(สำหรับถังขยะสีส้ม)<br></h3>
+      <br>
+      <h2>เงื่อนไขการเล่น :</h2><br><br>
+      <h3>
+      เมื่อเกมเริ่ม(start)ขยะจะไหลลงมาถึงตำแหน่งถังขยะแต่ละถัง ผู้เล่นจะต้องกดปุ่มให้ตรงจังหวะที่ขยะไหลลงมาถึงพอดี ถ้าทำได้คะแนนจะเพิ่มครั้งละ1แต้ม
+      แต่ถ้าผู้เล่นไม่สามารถกดได้ทันหรือผู้เล่นกดก่อนที่ขยะจะถึงตำแหน่งของถังขยะแต่ละถัง พลังชีวิต(live)ของผู้เล่นจะถูกลบครั้งละ1 เกมจะจบก็ต่อเมื่อพลังชีวิตของผู้เล่นลดลงจนเหลือ0
+      </h3>
+      
   <button id="back" onclick="backtowebsite()">back</button>
   </div>
   <div id="menu">
     <img id="logo" src="/img/logo.png"></img>
-    <button id="play" onclick="first()">play</button>
+    <button id="play" onclick="first()">Play</button>
     <button id="how" onclick="howtoplay()">How To Play</button>
     <button id="web" onclick="website()">Website</button>
   </div>
   <div id="board">
     <h1>Game Over!</h1>
-    <h2 id="text1">Your score: <div id="score2">0</div></h2>
-    <h2 id="text2">Your time: <label id="minutes2">00</label> <label id="seconds2">00</label></h2>
+    <h2 id="text1">Your score : <div id="score2">0</div></h2>
+    <h2 id="text2">Your time : <label id="minutes2">00</label> <label id="seconds2">00</label></h2>
     <button id="link" onclick="website()">Website</button>
     <button id="menubut" onclick="reload()">Menu</button>
   </div>
