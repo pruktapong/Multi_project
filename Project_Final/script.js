@@ -1,6 +1,7 @@
 var point = 0;
 var check = 1;
 var block = document.getElementById("block");
+var livee = document.getElementById("live");
 var live = 15;
 var img = document.getElementById("background");
 var img2 = document.getElementById("block");
@@ -9,16 +10,30 @@ var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
 var countdown = document.getElementById("countdown");
 var sec_count = 3;
+var hit1 = document.getElementById("button1");
+var hit2 = document.getElementById("button2");
+var hit3 = document.getElementById("button3");
+var hit4 = document.getElementById("button4");
+var hit5 = document.getElementById("button5");
 function reload() {
+  click();
   location.reload();
 }
+function click () {
+  document.getElementById("click").play();
+}
+function count(){
+  document.getElementById("321").play();
+}
 function backtowebsite() {
+  click();
   document.getElementById("menu").style.display = "block";
   document.getElementById("howtoplay").style.display = "none";
   document.getElementById("board").style.display = "none";
   document.getElementById("game").style.display = "none";
 }
 function howtoplay() {
+  click();
   document.getElementById("menu").style.display = "none";
   document.getElementById("howtoplay").style.display = "block";
 }
@@ -47,14 +62,19 @@ function pad(val) {
   }
 }
 function website() {
+  click();
   window.open("https://gracious-minsky-279da1.netlify.app/", "_blank");
 }
 function first() {
+  count();
+  click();
+  document.getElementById("theme").play();
+  document.getElementById("theme").volume = 0.25;
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "block";
   setInterval(setTime, 1000);
   setTimeout(function start() {
-    block.style.animation = "slide 1.5s infinite";
+    block.style.animation = "slide 2s infinite";
   }, 3000);
 }
 block.addEventListener("animationiteration", () => {
@@ -126,14 +146,16 @@ document.addEventListener("keyup", (event) => {
 
   //console.log(event.key);
 
-  if (event.key == "q" && check_x == 0 && check_y <= 600 && check_y > 500 && check != 0) {
+  if (event.key == "a" && check_x == 0 && check_y <= 600 && check_y > 500 && check != 0) {
     //Condition Gameplay(main)
     console.log("hit1");
     point++;
     check = 0;
+    hit1.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "w" &&
+    event.key === "s" &&
     check_x == 100 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -142,9 +164,11 @@ document.addEventListener("keyup", (event) => {
     console.log("hit2");
     point++;
     check = 0;
+    hit2.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "e" &&
+    event.key === "j" &&
     check_x == 200 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -153,9 +177,11 @@ document.addEventListener("keyup", (event) => {
     console.log("hit3");
     point++;
     check = 0;
+    hit3.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "r" &&
+    event.key === "k" &&
     check_x == 300 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -164,9 +190,11 @@ document.addEventListener("keyup", (event) => {
     console.log("hit4");
     point++;
     check = 0;
+    hit4.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "t" &&
+    event.key === "l" &&
     check_x == 400 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -175,6 +203,8 @@ document.addEventListener("keyup", (event) => {
     console.log("hit5");
     point++;
     check = 0;
+    hit5.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (check_y > 0 && check_y <= 500 && check != 2) {
     console.log("up");
@@ -192,7 +222,11 @@ var timer = setInterval(() => {
     window.getComputedStyle(block).getPropertyValue("top")
   );
   if (check_y < 0) {
-    console.log("hitttt");
+    hit1.style.animation = "";
+    hit2.style.animation = "";
+    hit3.style.animation = "";
+    hit4.style.animation = "";
+    hit5.style.animation = "";
     check = 1;
   } else if (check == 1 && check_y > 600) {
     console.log("miss");
@@ -203,14 +237,23 @@ var timer = setInterval(() => {
   }
   if (live == 10) {
     img.src = "img/ระดับ2.jpg";
+    livee.style.animation = "alarm2 1s alternate infinite";
   }
   if (live == 5) {
+    document.getElementById("alarm").play();
+    livee.style.animation = "alarm 0.25s alternate infinite";
     img.src = "img/ระดับ3.jpg";
   }
   if (live == 2) {
     img.src = "img/ระดับ4.jpg";
   }
   if (live == -1) {
+    document.getElementById("alarm").pause();
+    document.getElementById("theme").pause();
+    document.getElementById("gameover").play();
+    document.getElementById("soundover").play();
+    document.getElementById("gameover").volume = "0.5";
+    document.getElementById("soundover").volume = "0.5";
     document.getElementById("board").style.display = "block";
     document.getElementById("game").style.display = "none";
     document.getElementById("score2").innerHTML = point;
@@ -219,17 +262,15 @@ var timer = setInterval(() => {
     );
     document.getElementById("seconds2").innerHTML = ": " + pad(totalSeconds % 60);
     myStopFunction();
-    //location.reload();
-    //alert("ขยะเน่าแล้วไอเวรร");
-  }
-  if (point == 5 && check_y > 600) {
-    block.style.animation = "slide 0.95s infinite";
-  }
-  if (point == 10 && check_y > 600) {
-    block.style.animation = "slide 0.85s infinite";
   }
   if (point == 15 && check_y > 600) {
-    block.style.animation = "slide 0.70s infinite";
+    block.style.animation = "slide 1.65s infinite";
+  }
+  if (point == 25 && check_y > 600) {
+    block.style.animation = "slide 1.35s infinite";
+  }
+  if (point == 50 && check_y > 600) {
+    block.style.animation = "slide 1.0s infinite";
   }
 }, 50);
 
