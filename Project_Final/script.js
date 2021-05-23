@@ -113,7 +113,7 @@ block.addEventListener("animationiteration", () => {
     block.style.left = "400px";
   }
   if (random_img == 8) {
-    img2.src = "img/object9.png";
+    img2.src = "img/object14.png";
     block.style.left = "400px";
   }
   if (random_img == 9) {
