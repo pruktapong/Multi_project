@@ -146,7 +146,7 @@ document.addEventListener("keyup", (event) => {
 
   //console.log(event.key);
 
-  if (event.key == "a" && check_x == 0 && check_y <= 600 && check_y > 500 && check != 0) {
+  if (event.key == "a" && check_x == 0 && check_y <= 600 && check_y > 500 && check == 1) {
     //Condition Gameplay(main)
     console.log("hit1");
     point++;
@@ -159,7 +159,7 @@ document.addEventListener("keyup", (event) => {
     check_x == 100 &&
     check_y <= 600 &&
     check_y > 500 &&
-    check != 0
+    check == 1
   ) {
     console.log("hit2");
     point++;
@@ -172,7 +172,7 @@ document.addEventListener("keyup", (event) => {
     check_x == 200 &&
     check_y <= 600 &&
     check_y > 500 &&
-    check != 0
+    check == 1
   ) {
     console.log("hit3");
     point++;
@@ -185,7 +185,7 @@ document.addEventListener("keyup", (event) => {
     check_x == 300 &&
     check_y <= 600 &&
     check_y > 500 &&
-    check != 0
+    check == 1
   ) {
     console.log("hit4");
     point++;
@@ -198,7 +198,7 @@ document.addEventListener("keyup", (event) => {
     check_x == 400 &&
     check_y <= 600 &&
     check_y > 500 &&
-    check != 0
+    check == 1
   ) {
     console.log("hit5");
     point++;
@@ -210,6 +210,9 @@ document.addEventListener("keyup", (event) => {
     console.log("up");
     live--;
     check = 2;
+    setTimeout(function miss() {
+      document.getElementById("miss").play();
+    }, 800);
     document.getElementById("score").innerHTML = point;
     document.getElementById("live").innerHTML = "live : " + live;
   }
@@ -230,6 +233,7 @@ var timer = setInterval(() => {
     check = 1;
   } else if (check == 1 && check_y > 600) {
     console.log("miss");
+    document.getElementById("miss").play();
     check = 3;
     live--;
     document.getElementById("score").innerHTML = point;
@@ -244,7 +248,7 @@ var timer = setInterval(() => {
     livee.style.animation = "alarm 0.25s alternate infinite";
     img.src = "img/ระดับ3.jpg";
   }
-  if (live == 2) {
+  if (live == 0) {
     img.src = "img/ระดับ4.jpg";
   }
   if (live == -1) {
@@ -262,6 +266,8 @@ var timer = setInterval(() => {
     );
     document.getElementById("seconds2").innerHTML = ": " + pad(totalSeconds % 60);
     myStopFunction();
+    //location.reload();
+    //alert("ขยะเน่าแล้วไอเวรร");
   }
   if (point == 15 && check_y > 600) {
     block.style.animation = "slide 1.65s infinite";
