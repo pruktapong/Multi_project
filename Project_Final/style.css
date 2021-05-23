@@ -178,9 +178,10 @@ svg{
   height: 220px;
   border-radius: 50px;
   display:none;
-  top:33%;
-  left:33%;
-  position:absolute;
+  top: 50%;
+  left: 50%;
+  position:fixed;
+  transform: translate(-50%, -50%);
   background-color: #D3D3D3;
   border: 10px solid #BEBEBE;
 }
@@ -233,43 +234,16 @@ iframe{
 }
 #logo{
   width: 40vw;
+  top:0.5vh;
   margin-left:30vw;
   position: relative;
+  animation: size_logo 1s alternate infinite;
 }
-#play, #how, #web{
-  text-decoration:none;
-  
-  height:80px;
-  width:200px;
-  border: 2px solid #1a3131;
-  padding:10px 20px 10px 20px;
-  border-radius:15px;
-  color:#1a3131;
-  background: #bbc7cc;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  display: block;
-  left: 45vw;
+@keyframes size_logo{
+  0% {transform: scale(1);}
+  100% {transform: scale(1.03);}
 }
-#play:hover, #how:hover, #web:hover{
-  color:#FFFFFF;
-  background-color:#1a3131;
-}
-#play:active, #how:active, #web:active{
-  transform: scale(0.90);
-}
-#play{
-  font-size:20px;
-  top: 5vh;
-}
-#how{
-  font-size:15px;
-  top:10vh;
-}
-#web{
-  font-size:20px;
-  top:15vh;
-}
+
 #howtoplay{
   width:800px;
   height:600px;
@@ -369,4 +343,95 @@ iframe{
   z-index: 1001;
   top: -90%;
   left: -35%;
+}
+#play, #how, #web, #know{
+  text-decoration:none;
+  height:80px;
+  width:220px;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: block;
+  left: 45vw;
+}
+#play{
+  font-size:20px;
+  top: 5vh;
+}
+#how{
+  font-size:15px;
+  top:8vh;
+}
+#know{
+  font-size:20px;
+  top:11vh;
+}
+#web{
+  font-size:20px;
+  top:14vh;
+}
+button {
+  text-transform:uppercase;
+  width:200px;
+  overflow:hidden;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: 0px ;
+}
+button:hover .liquid{
+  top:-120px;
+}
+button span{
+  position:relative;
+  z-index:1;
+  color:rgb(0, 0, 0);
+  font-size:20px;
+  letter-spacing:8px;
+}
+
+button .liquid{
+  position:absolute;
+  top:-80px;
+  left:0;
+  width:220px;
+  height:200px;
+  background-color:#8ad4ff;
+  box-shadow:inset 0 0 50px rgba(0,0,0,0.5);
+  transition:0.5s;
+}
+
+button .liquid::before,button .liquid::after{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-72%);
+}
+
+
+button .liquid::before{
+  border-radius:45%;
+  background-color:rgba(255, 255, 255, 0.5);
+  animation: wave 5s linear infinite;
+}
+
+
+
+button .liquid::after{
+  border-radius:40%;
+  background-color:rgba(255, 255, 255, 0.5);
+  animation: wave 5s linear infinite;
+}
+
+@keyframes wave{
+  0%{
+    transform:translate(-50%,-72%) rotate(0deg); 
+  }
+  
+  100%{
+    transform:translate(-50%,-72%) rotate(360deg); 
+  }
 }
