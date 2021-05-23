@@ -435,3 +435,21 @@ button .liquid::after{
     transform:translate(-50%,-72%) rotate(360deg); 
   }
 }
+@keyframes hit {
+  0% {transform: scale(1);
+  }
+  100% {transform: scale(1.25);
+  }
+}
+@keyframes alarm {
+  0% {transform: scale(1);
+    background-color: pink;}
+  100% {transform: scale(1.25);
+    background-color: red;}
+}
+@keyframes alarm2 {
+  0% {transform: scale(1);
+    background-color: white;}
+  100% {transform: scale(1.1);
+    background-color: pink;}
+}
