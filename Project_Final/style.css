@@ -1,7 +1,6 @@
 body{
   background-size:cover;
   overflow: hidden;
-  
 }
 *{
   margin: 0;
@@ -30,6 +29,8 @@ body{
   background-position: center;
   position: relative;
   animation: none;
+  animation-timing-function:linear;
+  transition-timing-function: ease-out;
 }
 
 #white
@@ -135,6 +136,7 @@ body{
   z-index: 1001;
 
 }
+
 #minutes{
   font-size: 25px;
   color:black;
@@ -210,7 +212,7 @@ h1{
   color:#1a3131;
   margin:70px;
   background: #bbc7cc;
-  font-family: "Lucida Console";
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   top:100px;
   left:0px;
@@ -244,7 +246,7 @@ iframe{
   border-radius:15px;
   color:#1a3131;
   background: #bbc7cc;
-  font-family: "Lucida Console";
+  font-family: 'Poppins', sans-serif;
   position: relative;
   display: block;
   left: 45vw;
@@ -274,6 +276,7 @@ iframe{
   border-radius: 50px;
   background-color: #D3D3D3;
   border: 10px solid #BEBEBE;
+  font-family: 'Prompt', sans-serif;
   display:none;
   margin:auto;
 }
@@ -287,7 +290,7 @@ iframe{
   border-radius:15px;
   color:#1a3131;
   background: #bbc7cc;
-  font-family: "Lucida Console";
+  font-family: 'Poppins', sans-serif;
   position: relative;
   margin:10px;
   left:85%;
@@ -308,7 +311,7 @@ iframe{
   color:#1a3131;
   margin:70px;
   background: #bbc7cc;
-  font-family: "Lucida Console";
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   top:100px;
   left:250px;
@@ -325,5 +328,45 @@ iframe{
   position: absolute;
   left: 48%;
   font-size: 100px;
-  font-family: "Lucida Console";
+  font-family: 'Poppins', sans-serif;
+}
+#live{
+  font-size: 25px;
+  width: 90px;
+  color:black;
+  position:relative;
+  z-index: 1001;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  background-color: white;
+  top: -110%;
+  left: -35%;
+}
+#time{
+  font-size: 25px;
+  width: 70px;
+  height: 30px;
+  color:black;
+  position:relative;
+  z-index: 1001;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  background-color: white;
+  top: -120%;
+  left: 115%;
+}
+#score{
+  font-size: 25px;
+  color:black;
+  width: 50px;
+  border: 2px solid #1a3131;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  background-color: white;
+  position:relative;
+  z-index: 1001;
+  top: -90%;
+  left: -35%;
 }
