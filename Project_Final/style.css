@@ -220,6 +220,10 @@ iframe{
   100% {transform: scale(1.03);}
 }
 
+#keyy{
+  width: 35px;
+}
+
 #howtoplay{
   width:800px;
   height:600px;
