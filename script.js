@@ -336,7 +336,7 @@ var timer = setInterval(() => {
   if (check_y > 470) {
     block.style.opacity = "0";
   }
-}, 50);
+}, 1000);
 
 function myStopFunction() {
   clearInterval(setTime);
