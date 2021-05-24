@@ -91,7 +91,7 @@ function first() {
 }
 block.addEventListener("animationiteration", () => {
   var random_img = Math.floor(Math.random() * 13);
-  console.log(random_img);
+  console.log("random" + random_img);
   if (random_img == 0) {
     img2.src = "img/object1.png";
     block.style.left = "200px";
