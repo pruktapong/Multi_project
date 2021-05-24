@@ -145,7 +145,6 @@ document.addEventListener("keyup", (event) => {
   );
 
   //console.log(event.key);
-
   if (event.key == "a" && check_x == 0 && check_y <= 600 && check_y > 500 && check == 1) {
     //Condition Gameplay(main)
     console.log("hit1");
@@ -273,10 +272,16 @@ var timer = setInterval(() => {
     block.style.animation = "slide 1.65s infinite";
   }
   if (point == 25 && check_y > 600) {
-    block.style.animation = "slide 1.35s infinite";
+    block.style.animation = "slide 1.25s infinite";
   }
   if (point == 50 && check_y > 600) {
-    block.style.animation = "slide 1.0s infinite";
+    block.style.animation = "slide 0.7s infinite";
+  }
+  if (check_y >= -100 && check_y <= 470) {
+    block.style.opacity = "1";
+  }
+  if (check_y > 470) {
+    block.style.opacity = "0";
   }
 }, 50);
 
