@@ -209,9 +209,9 @@ iframe{
   position: absolute;
 }
 #logo{
-  width: 40vw;
+  width: 35vw;
   top:0.5vh;
-  margin-left:30vw;
+  margin-left:35vw;
   position: relative;
   animation: size_logo 1s alternate infinite;
 }
