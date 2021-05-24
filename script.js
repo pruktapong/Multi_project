@@ -43,7 +43,7 @@ function preloadImages(array) {
 }
 
 preloadImages(["img/object1.png", "img/object2.png", "img/object3.png", "img/object4.png", "img/object5.png", 
-"img/object6.png", "img/object7.png", "img/object8.png", "img/object9.png", "img/object10.png", "img/object11.png", "img/object12.png", "img/object13.png", "img/object14.png"]);
+"img/object6.png", "img/object7.png", "img/object8.png", "img/object10.png", "img/object11.png", "img/object12.png", "img/object13.png", "img/object14.png"]);
 
 function reload() {
   click();
