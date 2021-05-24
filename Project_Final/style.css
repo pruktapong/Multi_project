@@ -223,12 +223,16 @@ iframe{
 #howtoplay{
   width:800px;
   height:600px;
+  margin:auto;
   border-radius: 50px;
   background-color: #D3D3D3;
   border: 10px solid #BEBEBE;
   font-family: 'Prompt', sans-serif;
+  position:fixed;
+  transform: translate(-50%, -50%);
   display:none;
-  margin:auto;
+  top: 50%;
+  left: 50%;
 }
 #back{
   text-decoration:none;
