@@ -162,6 +162,7 @@ document.addEventListener("keyup", (event) => {
     console.log("hit1");
     point++;
     check = 0;
+    document.getElementById("hitt").innerHTML = "PERFECT";
     document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
@@ -179,6 +180,7 @@ document.addEventListener("keyup", (event) => {
     console.log("hit2");
     point++;
     check = 0;
+    document.getElementById("hitt").innerHTML = "PERFECT";
     document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
@@ -196,6 +198,7 @@ document.addEventListener("keyup", (event) => {
     console.log("hit3");
     point++;
     check = 0;
+    document.getElementById("hitt").innerHTML = "PERFECT";
     document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
@@ -214,6 +217,7 @@ document.addEventListener("keyup", (event) => {
     console.log("hit4");
     point++;
     check = 0;
+    document.getElementById("hitt").innerHTML = "PERFECT";
     document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
@@ -231,6 +235,7 @@ document.addEventListener("keyup", (event) => {
     console.log("hit5");
     point++;
     check = 0;
+    document.getElementById("hitt").innerHTML = "PERFECT";
     document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
