@@ -18,6 +18,9 @@ var hit5 = document.getElementById("button5");
 var hit = document.getElementById("hitt");
 var plus = document.getElementById("plus");
 var diff = document.getElementById("diff");
+document.getElementById("sea").play();
+document.getElementById("sea").loop = true;
+document.getElementById("sea").volume = 0.5;
 function reload() {
   click();
   location.reload();
