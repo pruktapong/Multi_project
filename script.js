@@ -367,6 +367,3 @@ function myStopFunction() {
   clearInterval(setTime);
   clearInterval(timer);
 }
-setTimeout(function(){
-    $('.loader_bg').fadeToggle()
-  }, 4000);
