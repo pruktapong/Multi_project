@@ -454,3 +454,20 @@ button .liquid::after{
   100% {transform: translateY(10%);
     opacity:0;}
 }
+#knowledge{
+  width:800px;
+  height:600px;
+  margin:auto;
+  font-size: 10px;
+  padding: 60px;
+  border-radius: 50px;
+  background-color: #D3D3D3;
+  border: 10px solid #BEBEBE;
+  font-family: 'Prompt', sans-serif;
+  position:fixed;
+  transform: translate(-50%, -50%);
+  display:none;
+  top: 50%;
+  left: 50%;
+  overflow:auto;
+}
