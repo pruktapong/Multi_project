@@ -347,12 +347,15 @@ var timer = setInterval(() => {
     //alert("ขยะเน่าแล้วไอเวรร");
   }
   if (point == 15 && check_y > 600) {
+    block.style.animation = "none";
     block.style.animation = "slide 1.65s infinite";
   }
   if (point == 25 && check_y > 600) {
+    block.style.animation = "none";
     block.style.animation = "slide 1.25s infinite";
   }
   if (point == 50 && check_y > 600) {
+    block.style.animation = "none";
     block.style.animation = "slide 0.95s infinite";
   }
   if (check_y >= -100 && check_y <= 470) {
