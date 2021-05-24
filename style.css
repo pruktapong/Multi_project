@@ -247,7 +247,8 @@ iframe{
   border-radius:15px;
   font-family: 'Poppins', sans-serif;
   position: relative;
-  left:82%;
+  top:-50px;
+  left:80%;
 }
 
 
