@@ -15,6 +15,9 @@ var hit2 = document.getElementById("button2");
 var hit3 = document.getElementById("button3");
 var hit4 = document.getElementById("button4");
 var hit5 = document.getElementById("button5");
+var hit = document.getElementById("hitt");
+var plus = document.getElementById("plus");
+var diff = document.getElementById("diff");
 function reload() {
   click();
   location.reload();
@@ -150,6 +153,10 @@ document.addEventListener("keyup", (event) => {
     console.log("hit1");
     point++;
     check = 0;
+    document.getElementById("plus").innerHTML = "+1";
+    hit.style.color = "yellow";
+    hit.style.left = "44%";
+    plus.style.animation = "plus 1.25s linear";
     hit1.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -163,6 +170,10 @@ document.addEventListener("keyup", (event) => {
     console.log("hit2");
     point++;
     check = 0;
+    document.getElementById("plus").innerHTML = "+1";
+    hit.style.color = "yellow";
+    hit.style.left = "44%";
+    plus.style.animation = "plus 1.25s linear";
     hit2.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -176,6 +187,12 @@ document.addEventListener("keyup", (event) => {
     console.log("hit3");
     point++;
     check = 0;
+    document.getElementById("plus").innerHTML = "+1";
+    hit.style.color = "yellow";
+    hit.style.left = "44%";
+    plus.style.animation = "plus 1.25s linear";
+    hit2.style.animation = "hit 0.15s alternate";
+    document.getElementById("hit").play();
     hit3.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -189,6 +206,10 @@ document.addEventListener("keyup", (event) => {
     console.log("hit4");
     point++;
     check = 0;
+    document.getElementById("plus").innerHTML = "+1";
+    hit.style.color = "yellow";
+    hit.style.left = "44%";
+    plus.style.animation = "plus 1.25s linear";
     hit4.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -202,6 +223,10 @@ document.addEventListener("keyup", (event) => {
     console.log("hit5");
     point++;
     check = 0;
+    document.getElementById("plus").innerHTML = "+1";
+    hit.style.color = "yellow";
+    hit.style.left = "44%";
+    plus.style.animation = "plus 1.25s linear";
     hit5.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -209,6 +234,11 @@ document.addEventListener("keyup", (event) => {
     console.log("up");
     live--;
     check = 2;
+    hit.style.left = "43%";
+    hit.style.color = "red";
+    document.getElementById("hitt").innerHTML = "TOO FAST";
+    diff.style.animation = "plus 1.25s linear";
+    document.getElementById("diff").innerHTML = "-1";
     setTimeout(function miss() {
       document.getElementById("miss").play();
     }, 800);
@@ -224,6 +254,11 @@ var timer = setInterval(() => {
     window.getComputedStyle(block).getPropertyValue("top")
   );
   if (check_y < 0) {
+    diff.style.animation = "";
+    document.getElementById("diff").innerHTML = "";
+    plus.style.animation = "";
+    document.getElementById("plus").innerHTML = "";
+    document.getElementById("hitt").innerHTML = "";
     hit1.style.animation = "";
     hit2.style.animation = "";
     hit3.style.animation = "";
@@ -234,6 +269,11 @@ var timer = setInterval(() => {
     console.log("miss");
     document.getElementById("miss").play();
     check = 3;
+    diff.style.animation = "plus 1.25s linear";
+    document.getElementById("diff").innerHTML = "-1";
+    hit.style.left = "47%";
+    hit.style.color = "red";
+    document.getElementById("hitt").innerHTML = "MISS";
     live--;
     document.getElementById("score").innerHTML = point;
     document.getElementById("live").innerHTML = "live : " + live;
