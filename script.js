@@ -328,7 +328,7 @@ var timer = setInterval(() => {
     block.style.animation = "slide 1.25s infinite";
   }
   if (point == 50 && check_y > 600) {
-    block.style.animation = "slide 0.7s infinite";
+    block.style.animation = "slide 0.95s infinite";
   }
   if (check_y >= -100 && check_y <= 470) {
     block.style.opacity = "1";
