@@ -200,7 +200,6 @@ document.addEventListener("keyup", (event) => {
     hit.style.color = "yellow";
     hit.style.left = "44%";
     plus.style.animation = "plus 1.25s linear";
-    hit2.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     hit3.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
