@@ -75,7 +75,7 @@ function pad(val) {
 }
 function website() {
   click();
-  window.open("https://gracious-minsky-279da1.netlify.app/", "_blank");
+  window.open("https://plasticocean.netlify.app/", "_blank");
 }
 function first() {
   count();
