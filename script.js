@@ -81,6 +81,7 @@ function first() {
   count();
   click();
   document.getElementById("theme").play();
+  document.getElementById("theme").loop = true;
   document.getElementById("theme").volume = 0.25;
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "block";
