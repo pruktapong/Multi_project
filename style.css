@@ -471,3 +471,92 @@ button .liquid::after{
   left: 50%;
   overflow:auto;
 }
+.img1{
+  width: 150px;
+  height: 150px;
+  border: none;
+  position: relative;
+  background-image: url(/img/object7.png);
+  background-size: 150px 150px;
+  background-position: center;
+  display: inline-block;
+}
+.img2{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object6.png);
+  background-size: 180px 180px;
+  background-position: center;
+  display: inline-block;
+}
+.img3{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object13.png);
+  background-size: 180px 180px;
+  background-position: center;
+  display: inline-block;
+}
+.img4{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object4.png);
+  background-size: 180px 180px;
+  background-position: center;
+  display: inline-block;
+  top:20px;
+}
+.img5{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object1.png);
+  background-size: 180px 180px;
+  background-position: center;
+  display: inline-block;
+}
+.img6{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object2.png);
+  background-size: 140px 140px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img7{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background: url(/img/object14.png);
+  background-size: 180px 180px;
+  background-position: center;
+  display: inline-block;
+  top:-50px;
+}
+.textknow{
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: 20px;
+  width: 620px;
+  height: 150px;
+  position: relative;
+  top:0px;
+}
+.other{
+  top: 40px;
+}
+#back1{
+  font-size:20px;
+  height:50px;
+  width:110px;
+  border-radius:15px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  top:40px;
+  left:90%;
+}
