@@ -45,7 +45,7 @@ body{
   z-index: 1000;
 }
 @keyframes slide {
-  0% {top: -100px;}
+  0% {top: -300px;}
   100% {top: 700px;}
 }
 #button
