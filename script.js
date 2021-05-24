@@ -37,11 +37,17 @@ function backtowebsite() {
   document.getElementById("howtoplay").style.display = "none";
   document.getElementById("board").style.display = "none";
   document.getElementById("game").style.display = "none";
+  document.getElementById("knowledge").style.display = "none";
 }
 function howtoplay() {
   click();
   document.getElementById("menu").style.display = "none";
   document.getElementById("howtoplay").style.display = "block";
+}
+function knowledge() {
+  click();
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("knowledge").style.display = "block";
 }
 function setTime() {
   if (sec_count > 1){
