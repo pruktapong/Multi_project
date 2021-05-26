@@ -338,6 +338,16 @@ iframe{
   left:-20px;
   width: 200px;
 }
+#menubut1{
+  width: 120px;
+  font-size: 25px;
+  color:black;
+  position:relative;
+  padding:10px 20px 10px 20px;
+  border-radius:15px;
+  top: -75%;
+  left: 115%;
+}
 #menubut{
   left:260px;
   width: 120px;
@@ -457,7 +467,7 @@ button .liquid::after{
 }
 #knowledge{
   width:800px;
-  height:600px;
+  height:60vh;
   margin:auto;
   font-size: 10px;
   padding: 60px;
@@ -476,6 +486,7 @@ button .liquid::after{
   width: 150px;
   height: 150px;
   border: none;
+  top:0px;
   position: relative;
   background-image: url(/img/object7.png);
   background-size: 150px 150px;
@@ -560,4 +571,67 @@ button .liquid::after{
   position: relative;
   top:40px;
   left:90%;
+}
+.imgbin1{
+  background: url(/img/bin1.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin2{
+  background: url(/img/bin2.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin3{
+  background: url(/img/bin2.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin4{
+  background: url(/img/bin3.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin5{
+  background: url(/img/bin3.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin6{
+  background: url(/img/bin4.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
+}
+.imgbin7{
+  background: url(/img/bin5.png);
+  top: 20px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background-position: center;
 }
