@@ -111,7 +111,7 @@ function first() {
   document.getElementById("game").style.display = "block";
   setInterval(setTime, 1000);
   setTimeout(function start() {
-    block.style.animation = "slide 2s infinite";
+    block.style.animation = "slide 4s infinite";
   }, 3000);
 }
 block.addEventListener("animationiteration", () => {
@@ -346,21 +346,60 @@ var timer = setInterval(() => {
     //location.reload();
     //alert("ขยะเน่าแล้วไอเวรร");
   }
-  if (point == 15 && check_y > 600) {
+  if (point == 3 && check_y > 600) {
     block.style.animation = "none";
-    block.style.animation = "slide 1.65s infinite";
+    block.style.animation = "slide 3.5s infinite";
   }
-  if (point == 25 && check_y > 600) {
+
+  if (point == 6 && check_y > 600) {
     block.style.animation = "none";
-    block.style.animation = "slide 1.25s infinite";
+    block.style.animation = "slide 3s infinite";
   }
+
+  if (point == 10 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 2.7s infinite";
+  }
+
+  if (point == 14 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 2.3s infinite";
+  }
+
+  if (point == 18 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 2s infinite";
+  }
+
+  if (point == 24 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 1.7s infinite";
+  }
+
+  if (point == 30 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 1.4s infinite";
+  }
+
+  if (point == 40 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 1.2s infinite";
+  }
+
   if (point == 50 && check_y > 600) {
     block.style.animation = "none";
-    block.style.animation = "slide 0.95s infinite";
+    block.style.animation = "slide 0.9s infinite";
   }
+
+  if (point == 100 && check_y > 600) {
+    block.style.animation = "none";
+    block.style.animation = "slide 0.5s infinite";
+  }
+
   if (check_y >= -100 && check_y <= 470) {
     block.style.opacity = "1";
   }
+  
   if (check_y > 470) {
     block.style.opacity = "0";
   }
