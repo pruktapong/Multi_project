@@ -16,8 +16,6 @@ var hit3 = document.getElementById("button3");
 var hit4 = document.getElementById("button4");
 var hit5 = document.getElementById("button5");
 var hit = document.getElementById("hitt");
-var plus = document.getElementById("plus");
-var diff = document.getElementById("diff");
 document.getElementById("sea").play();
 document.getElementById("sea").loop = true;
 document.getElementById("sea").volume = 0.5;
@@ -45,6 +43,18 @@ function preloadImages(array) {
 preloadImages(["img/object1.png", "img/object2.png", "img/object3.png", "img/object4.png", "img/object5.png", 
 "img/object6.png", "img/object7.png", "img/object8.png", "img/object10.png", "img/object11.png", "img/object12.png", "img/object13.png", "img/object14.png"]);
 
+window.onload = function() {
+  var reloading = sessionStorage.getItem("reloading");
+  if (reloading) {
+      sessionStorage.removeItem("reloading");
+      first();
+  }
+}
+
+function again() {
+  sessionStorage.setItem("reloading", "true");
+  document.location.reload();
+}
 function reload() {
   click();
   location.reload();
@@ -188,10 +198,8 @@ document.addEventListener("keyup", (event) => {
     point++;
     check = 0;
     document.getElementById("hitt").innerHTML = "PERFECT";
-    document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
-    plus.style.animation = "plus 1.25s linear";
     hit1.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -206,10 +214,8 @@ document.addEventListener("keyup", (event) => {
     point++;
     check = 0;
     document.getElementById("hitt").innerHTML = "PERFECT";
-    document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
-    plus.style.animation = "plus 1.25s linear";
     hit2.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -224,10 +230,8 @@ document.addEventListener("keyup", (event) => {
     point++;
     check = 0;
     document.getElementById("hitt").innerHTML = "PERFECT";
-    document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
-    plus.style.animation = "plus 1.25s linear";
     document.getElementById("hit").play();
     hit3.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
@@ -243,10 +247,8 @@ document.addEventListener("keyup", (event) => {
     point++;
     check = 0;
     document.getElementById("hitt").innerHTML = "PERFECT";
-    document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
-    plus.style.animation = "plus 1.25s linear";
     hit4.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -261,10 +263,8 @@ document.addEventListener("keyup", (event) => {
     point++;
     check = 0;
     document.getElementById("hitt").innerHTML = "PERFECT";
-    document.getElementById("plus").innerHTML = "+1";
     hit.style.color = "yellow";
     hit.style.left = "44%";
-    plus.style.animation = "plus 1.25s linear";
     hit5.style.animation = "hit 0.15s alternate";
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
@@ -275,8 +275,6 @@ document.addEventListener("keyup", (event) => {
     hit.style.left = "43%";
     hit.style.color = "red";
     document.getElementById("hitt").innerHTML = "TOO FAST";
-    diff.style.animation = "plus 1.25s linear";
-    document.getElementById("diff").innerHTML = "-1";
     setTimeout(function miss() {
       document.getElementById("miss").play();
     }, 800);
@@ -292,10 +290,6 @@ var timer = setInterval(() => {
     window.getComputedStyle(block).getPropertyValue("top")
   );
   if (check_y < 0) {
-    diff.style.animation = "";
-    document.getElementById("diff").innerHTML = "";
-    plus.style.animation = "";
-    document.getElementById("plus").innerHTML = "";
     document.getElementById("hitt").innerHTML = "";
     hit1.style.animation = "";
     hit2.style.animation = "";
@@ -307,8 +301,6 @@ var timer = setInterval(() => {
     console.log("miss");
     document.getElementById("miss").play();
     check = 3;
-    diff.style.animation = "plus 1.25s linear";
-    document.getElementById("diff").innerHTML = "-1";
     hit.style.left = "47%";
     hit.style.color = "red";
     document.getElementById("hitt").innerHTML = "MISS";
