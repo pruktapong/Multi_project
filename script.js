@@ -99,7 +99,7 @@ function pad(val) {
 }
 function website() {
   click();
-  window.open("https://plasticocean.netlify.app/", "_blank");
+  window.open("https://plasticocean.netlify.app/index1.html", "_blank");
 }
 function first() {
   count();
@@ -181,8 +181,8 @@ document.addEventListener("keyup", (event) => {
     window.getComputedStyle(block).getPropertyValue("top")
   );
 
-  //console.log(event.key);
-  if (event.key == "a" && check_x == 0 && check_y <= 600 && check_y > 500 && check == 1) {
+  //console.log(event.which);
+  if (event.which == 65 && check_x == 0 && check_y <= 600 && check_y > 500 && check == 1) {
     //Condition Gameplay(main)
     console.log("hit1");
     point++;
@@ -196,7 +196,7 @@ document.addEventListener("keyup", (event) => {
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "s" &&
+    event.which === 83 &&
     check_x == 100 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -214,7 +214,7 @@ document.addEventListener("keyup", (event) => {
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "j" &&
+    event.which === 74 &&
     check_x == 200 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -233,7 +233,7 @@ document.addEventListener("keyup", (event) => {
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "k" &&
+    event.which === 75 &&
     check_x == 300 &&
     check_y <= 600 &&
     check_y > 500 &&
@@ -251,7 +251,7 @@ document.addEventListener("keyup", (event) => {
     document.getElementById("hit").play();
     document.getElementById("score").innerHTML = point;
   } else if (
-    event.key === "l" &&
+    event.which === 76 &&
     check_x == 400 &&
     check_y <= 600 &&
     check_y > 500 &&
